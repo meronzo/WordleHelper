@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>tutorial</title>
+        <link rel="icon" href="../../images/favicon.png">
+
+        <link rel = "stylesheet" href = "../../CSS_JS/updates.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/db1e596adb.js" crossorigin="anonymous"></script>
+
+        <!--
+            z-index:
+                0-8: basic HTMLs
+                9:  fa icons
+                10: modal-mask
+                11: modal-menu
+        -->
+    </head>
+    <body>
+        <div id="modal-mask" onclick="hideMenu()"></div>
+        <section id="header">
+            <nav>
+                <a><img src = "../../images/favicon.png"></a>
+
+                <div id="nav-links">
+                    <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
+                    <ul>
+                        <li id = "lang-select">言語<spa id="u_triangle"></spa>
+                            <ul id="small-list">
+                                <li class="lang-selected">日本語</li>
+                                <li><a href="../lang=ch/updates.html">中文</a></li>
+                                <li><a href="../lang=en/updates.html">English</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="tutorial.html">チュートリアル</a></li>
+                        <li><a href="homesite.html#content">特徴</a></li>
+                        <li><a href="homesite.html#FAQ">FAQ</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
+
+            </nav>
+            <div id = "content_capture">
+                <h1>アップデートログ<br></h1>
+                <div id = "capture_phrase">
+                    様々なバージョンをダウンロードできます
+                </div>
+            </div>
+        </section>
+
+        <div id="update-log">
+            <div class="update-box">
+                <h3>2022/04/08</h3>
+                <div class="update-flex">
+                    <div class="update-explanation">
+                        最初のリリースです<br>
+                        Wordleをプレイする際、ユーザーをアシストします<br>
+                        <span class="version">
+                            ver 1.0.0
+                        </span>
+                    </div>
+                    <div class="dl-btn"><i class="fa fa-download" aria-hidden="true"></i></div>
+                </div>
+            </div>
+        </div> 
+
+        <script src="../../CSS_JS/updates.js"></script>
+    </body>
+</html>

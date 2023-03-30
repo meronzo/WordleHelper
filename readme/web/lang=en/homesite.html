@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>WordleHandler</title>
+    <link rel="icon" href="../../images/favicon.png">
+
+    <link rel = "stylesheet" href = "../../CSS_JS\homesite.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/db1e596adb.js" crossorigin="anonymous"></script>
+
+    <!--
+        z-index:
+            0-8: basic HTMLs
+            9:  fa icons
+            10: modal-mask
+            11: modal-menu
+          1000: overlay
+          1001: modalWindow
+    -->
+</head>
+<body>
+
+
+
+    <!-- menu-bar for phone -->
+    <div id="modal-mask" onclick="hideMenu()"></div>
+
+    <!-- header-->
+    <section id = "header">
+        <nav>
+            <a><img src = "../../images/favicon.png"></a>
+
+            <div id="nav-links">
+                <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
+                <ul>
+                    <li id = "lang-select">Language<spa id="u_triangle"></spa>
+                        <ul id="small-list">
+                            <li><a href="../lang=ja/homesite.html">日本語</a></li>
+                            <li><a href="../lang=ch/homesite.html">中文</a></li>
+                            <li class="lang-selected">English</li>
+                        </ul>
+                    </li>
+                    <li><a href="tutorial.html">Tutorial</a></li>
+                    <li><a href="homesite.html#content">Features</a></li>
+                    <li><a href="homesite.html#FAQ">FAQ</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
+
+        </nav>
+
+        <!-- caption and dl btn-->
+        <div id = "content_capture">
+            <h1>World's Best Helper<br></h1>
+            <div id = "capture_phrase">
+                Win the Wordle on your own, and with wordle handler
+            </div>
+            <div id = "dl-btn">
+                <a href="../../data/data.zip" download="data.zip">
+                Download Now
+                <i class="fa fa-download" aria-hidden="true"></i>
+                </a>
+            </div>
+            <!---
+            <div id = "card"></div>
+            -->
+        </div>
+    </section>
+
+
+    <!-- explanation -->
+    <div id = "content">
+        <!-- modalWondow -->
+        <div id="overlay"></div>
+            <!-- should be put near the modalWindow -->
+            <!-- <span id="donation-plea">You can support me with donating!</span> -->
+            
+            <div id="baloon">
+                donate to support me!
+            </div>
+            
+            <div id="modalWindow">
+
+
+                <div id="donation-container">
+                    <div id="donation-title">
+                        DONATING FORM
+                    </div>
+                    
+                    <div id="donation-form">
+                        <div id="donation-profile">
+                            <label for="firstName">First Name</label>
+                                <input type="text"  id="firstName" class="form" placeholder="First Name">
+                            <label for="lirstName">Last Name</label>
+                                <input type="text"  id="lastName"  class="form" placeholder="Last Name">
+                            <label for="email">Email Address</label>
+                                <input type="email" id="email"     class="form" placeholder="Email">
+                            <label for="cardNumber">Card Number</label>
+                                <input type="text"  id="cardNumber"class="form" placeholder="1234 5678 9012 3456">
+                            <label for="Date">Date</label>
+                                <input type="text"  id="Date"      class="form" placeholder="MM/YY">
+                            <label for="CVV">CVV on Card</label>
+                                <input type="text"  id="CVV"       class="form" placeholder="CVV">
+                            <input type="checkbox" id="receipt">
+                                <label for="receipt">EMAIL ME A RECIPT</label><br>
+                        </div>
+
+                        <div id="donation-actions">
+                            <!-- insert a br to adjust height that label caused-->
+                            <br>
+                            <div class="button">$10</div>
+                            <div class="button">$20</div>
+                            <div class="button">$30</div>
+                            <div class="button">$<input type="text" id="set-value"></div>
+                        </div>
+                    </div>
+
+                    <input type="submit" id="submission" value="DONATE!">
+                </div>
+                
+        </div>
+
+
+        <div id="content_summary">
+        <h2>What is this <br><span class = "bottom_line">cool product</span>?</h2>
+            <div id = "content_introduction">
+                <img src="../../images/wordle.jpg">
+                <div id="textbox">
+                    <article id = "text_introduction">
+                        <h3>WordleHandler</h3>
+                        <p>With our well-designed program,<br> you can win the game more efficiently.</p>
+                        <br><br>
+                        <p>Don't know how to use it? check here!</p>
+                    </article>
+                    
+                    <div id = "buttons">
+                        <a href="tutorial.html" class = "hover-button">tutorial</a>
+                        or
+                        <a href="updates.html" class = "hover-button">Updates</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- feature cards-->
+        <div id = "content_character">
+            <h2>Why this could be <br><span class = "bottom_line">so incredible</span>?</h2>
+            <div id = "boxes">
+                <!-- blur others when hover -->
+                <!-- maybe title can move 20px~~ -->
+                <div class = "box js-scrollAnimation_toRight" style="--order: 3">
+                    <img class = "icon" src = "../../images/icon1.png">
+                    <div class = "description">
+                        <h3>excellent UI</h3>
+                        <p>With its destinctive UI,you can operate it with instinct.</p>
+                    </div>
+                </div>
+
+                <div class = "box js-scrollAnimation_toRight" style="--order: 2">
+                    <img class = "icon" src = "../../images/icon2.png">
+                    <div class = "description">
+                        <h3>smart predict</h3>
+                        <p>Its notable algorithm suggests you the word</p>
+                    </div>
+                </div>
+
+                <div class = "box js-scrollAnimation_toRight" style="--order: 1">
+                    <img class = "icon" src = "../../images/icon3.png">
+                    <div class = "description">
+                        <h3>rapid support</h3>
+                        <p>Customer support team will swiftly solve your problem</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- user's comment-->
+        <div id="user_review">
+            <h2>With many<br><span class = "bottom_line">favorable reviews</span></h2>
+
+            <div id="review_boxes">
+
+                <div class = "review_box js-scrollAnimation_fadeIn">
+                    <div class="review_status">
+                        <figure><img src = "../../images/review_icon1.jpg"></figure>
+                        <span class="stars" style="--star: 5">★★★★★</span>
+                        <span clas="reviewer_name">Google User</span>
+                    </div>
+                    <div class="review">
+                        视觉上的享受!以后再也不会无聊。还有一个特别的小技巧告诉大家。在㎝㎎，㏄的页面可以体验满级VIP加千倍掉宝倍率的版本了。
+                        终于收到我需要的宝贝了。东西很好。价美物廉。说实在这是我来让我最满意的一次购物。无论是掌柜的态度还是对物品。
+                        我都非常满意的。掌柜态度很专业热情。有问必答。回复也很快。
+                        我问了不少问题。他都不觉得烦。
+                    </div>
+                </div>
+
+                <div class = "review_box js-scrollAnimation_fadeIn"">
+                    <div class="review_status">
+                        <figure><img src = "../../images/review_icon2.jpg"></figure>
+                        <span class="stars" style="--star: 3.5">★★★★★</span>
+                        <span clas="reviewer_name">someone's name</span>
+                    </div>
+                    <div class="review">
+                        What a practical extension!After I installed, I got a new wife and Stock price doubled!<br>
+                        I'm going to intern the creater!
+                    </div>
+                </div>
+
+                <div class = "review_box js-scrollAnimation_fadeIn">
+                    <div class="review_status">
+                        <figure><img src = "../../images/review_icon3.jpg"></figure>
+                        <span class="stars" style="--star: 4.5">★★★★★</span>
+                        <span clas="reviewer_name">someone's name</span>
+                    </div>
+                    <div class="review">
+                        Its resposibility is as quick as the slap that Will Smith made!<br>
+                        I can't help asking which will be released first,new product or g.i jane?<br>
+                        I can't wait!!
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+
+
+        <!-- BOOT STRAP accordion -->
+        <div id="FAQ">
+            <h2>If you are confused...</h2>
+            <div id="">
+                <button class="accordion">How I can use this?</button>
+                <div class="panel">
+                <p>Please check <a href="">tutorial</a></p>
+                </div>
+
+                <button class="accordion">Could I custormize?</button>
+                <div class="panel">
+                <p>Of course!</p>
+                <p>My technique is not skilled, you can upgrade on your own.</p>
+                </div>
+
+                <button class="accordion">I find bugs. how I can inform you?</button>
+                <div class="panel">
+                <p>You can inform me on <a href="homesite.html#contact">contact us</a></p>
+            </div>
+        </div>
+
+
+        </div>
+        <div id="contact">
+            <h2>Contact Us</h2>
+            <div id="container">
+                <img src="../../images/customer service.jpg" id="bgimage">
+            </div>
+            <div class="contact_form">
+                <label for="CfirstName">First name</label>
+                    <input type="text"  id="CfirstName" class="form" placeholder="First Name">
+                <label for="ClirstName">Last name</label>
+                    <input type="text"  id="ClastName"  class="form" placeholder="Last Name">
+                <label for="Cemail">Email account</label>
+                    <input type="email" id="Cemail"     class="form" placeholder="Email">
+                <label for="Ccontent">what you want to notify</label>
+                    <textarea id="Ccontent"    class="textarea" placeholder="Enter some text"></textarea>
+                <input type="submit" class="submit" value="submit!">
+            </div>
+        </div>
+
+            
+
+        <!-- SNS icons and CC -->
+            <div id="footer">
+                <span id="copyRight">© 2022 WordleHandler</span>
+                <div id="SNSs">
+                    <a href="#">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>   
+                    <a href="#">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <script src = "../../CSS_JS/homesite.js"></script>
+
+    </div>
+</body>
+</html>

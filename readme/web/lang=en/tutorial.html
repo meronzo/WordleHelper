@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>tutorial</title>
+    <link rel="icon" href="../../images/favicon.png">
+
+    <link rel = "stylesheet" href = "../../CSS_JS/tutorial.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/db1e596adb.js" crossorigin="anonymous"></script>
+
+    <!--
+        z-index:
+            0-8: basic HTMLs
+            9:  fa icons
+            10: modal-mask
+            11: modal-menu
+    -->
+</head>
+<body>
+    <div id="modal-mask" onclick="hideMenu()"></div>
+    <section id="header">
+        <nav>
+            <a><img src = "../../images/favicon.png"></a>
+
+            <div id="nav-links">
+                <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
+                <ul>
+                    <li id = "lang-select">Language<spa id="u_triangle"></spa>
+                        <ul id="small-list">
+                            <li><a href="../lang=ja/tutorial.html">日本語</a></li>
+                            <li><a href="../lang=ch/tutorial.html">中文</a></li>
+                            <li class="lang-selected">English</li>
+                        </ul>
+                    </li>
+                    <li><a href="tutorial.html">Tutorial</a></li>
+                    <li><a href="homesite.html#content">Features</a></li>
+                    <li><a href="homesite.html#FAQ">FAQ</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
+
+        </nav>
+        <div id = "content_capture">
+            <h1>WordleHandler Tutorial<br></h1>
+            <div id = "capture_phrase">
+                With sinple steps to help you set up.
+            </div>
+        </div>
+    </section>
+
+    <section id="tutorial">
+        <h2>Set up tutorial</h2>
+        <div id="tutorial_explain">
+            <div class="explain_space">
+                <h3>Step 1</h3>
+                <p>Type <span class="highlight">chrome://extensions/</span> into your address bar.</p>
+            </div>
+            <div class="explain_space">
+                <h3>Step 2</h3>
+                <img src="../../images/scrshot_1.jpg">
+                <p>Turn on the <span class="highlight"> developer mode. </span></p>
+            </div>
+            <div class="explain_space">
+                <h3>Step 3</h3>
+                <p><span class="highlight"> Load program file </span>into the website.</p>
+                <p>If you haven't installed yet, please install first</p>
+                <div id="dl-button">
+                    <a href="homesite.html#header">
+                        Download now!
+                    </a>
+                </div>
+            </div>
+            <div class="explain_space">
+                <h3>Step 3</h3>
+                <p>Then you can operate this program in Wordle</p>
+                <p>Have a nice Wordle life!</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src = "../../CSS_JS/tutorial.js"></script>
+</body>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>WordleHandler</title>
+    <link rel="icon" href="../../images/favicon.png">
+
+    <link rel = "stylesheet" href = "../../CSS_JS\homesite.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/db1e596adb.js" crossorigin="anonymous"></script>
+
+    <!--
+        z-index:
+            0-8: basic HTMLs
+            9:  fa icons
+            10: modal-mask
+            11: modal-menu
+          1000: overlay
+          1001: modalWindow
+    -->
+</head>
+<body>
+
+
+
+    <!-- menu-bar for phone -->
+    <div id="modal-mask" onclick="hideMenu()"></div>
+
+    <!-- header-->
+    <section id = "header">
+        <nav>
+            <a><img src = "../../images/favicon.png"></a>
+
+            <div id="nav-links">
+                <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
+                <ul>
+                    <li id = "lang-select">言語<spa id="u_triangle"></spa>
+                        <ul id="small-list">
+                            <li class="lang-selected">日本語</li>
+                            <li><a href="../lang=ch/homesite.html">中文</a></li>
+                            <li><a href="../lang=en/homesite.html">English</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="tutorial.html">チュートリアル</a></li>
+                    <li><a href="homesite.html#content">特徴</a></li>
+                    <li><a href="homesite.html#FAQ">FAQ</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
+
+        </nav>
+
+        <!-- caption and dl btn-->
+        <div id = "content_capture">
+            <h1>Wordleの体験を一新しませんか？<br></h1>
+            <div id = "capture_phrase">
+                今までになかった革新的な方法であなたのゲームを助けます
+            </div>
+            <div id = "dl-btn">
+                <a href="../../data/data.zip" download="data.zip">
+                    今すぐダウンロード
+                <i class="fa fa-download" aria-hidden="true"></i>
+                </a>
+            </div>
+            <!---
+            <div id = "card"></div>
+            -->
+        </div>
+    </section>
+
+
+    <!-- explanation -->
+    <div id = "content">
+        <!-- modalWondow -->
+        <div id="overlay"></div>
+            <!-- should be put near the modalWindow -->
+            <!-- <span id="donation-plea">You can support me with donating!</span> -->
+            
+            <div id="baloon">
+                よければ寄付も！
+            </div>
+            
+            <div id="modalWindow">
+
+
+                <div id="donation-container">
+                    <div id="donation-title">
+                        寄付フォーム
+                    </div>
+                    
+                    <div id="donation-form">
+                        <div id="donation-profile">
+                            <label for="firstName">お名前</label>
+                                <input type="text"  id="firstName" class="form" placeholder="First Name">
+                            <label for="lirstName">苗字</label>
+                                <input type="text"  id="lastName"  class="form" placeholder="Last Name">
+                            <label for="email">Emailアドレス</label>
+                                <input type="email" id="email"     class="form" placeholder="Email">
+                            <label for="cardNumber">カードナンバー</label>
+                                <input type="text"  id="cardNumber"class="form" placeholder="1234 5678 9012 3456">
+                            <label for="Date">日付</label>
+                                <input type="text"  id="Date"      class="form" placeholder="MM/YY">
+                            <label for="CVV">CVVナンバー</label>
+                                <input type="text"  id="CVV"       class="form" placeholder="CVV">
+                            <input type="checkbox" id="receipt">
+                                <label for="receipt">レシートをメールで送る</label><br>
+                        </div>
+
+                        <div id="donation-actions">
+                            <!-- insert a br to adjust height that label caused-->
+                            <br>
+                            <div class="button">$10</div>
+                            <div class="button">$20</div>
+                            <div class="button">$30</div>
+                            <div class="button">$<input type="text" id="set-value"></div>
+                        </div>
+                    </div>
+
+                    <input type="submit" id="submission" value="DONATE!">
+                </div>
+                
+        </div>
+
+
+        <div id="content_summary">
+        <h2>これは <br><span class = "bottom_line">一体何</span>?</h2>
+            <div id = "content_introduction">
+                <img src="../../images/wordle.jpg">
+                <div id="textbox">
+                    <article id = "text_introduction">
+                        <h3>Wordle Helper</h3>
+                        <p>Wordleを遊んでいる時、聞いたこともない単語が出てきたせいで<br>クリアができなかった経験はありませんか？ </p>
+                        <p>このプログラムはユーザーがそういった体験を二度としないようにお手伝いします！</p>
+                        <br><br>
+                        <p>まだ使い方がわからない場合、下のリンクをご参照ください</p>
+                    </article>
+                    
+                    <div id = "buttons">
+                        <a href="tutorial.html" class = "hover-button">チュートリアル</a>
+                        または
+                        <a href="updates.html" class = "hover-button">アップデートログ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- feature cards-->
+        <div id = "content_character">
+            <h2>このプログラムは <br><span class = "bottom_line">何がすごいのか</span>?</h2>
+            <div id = "boxes">
+                <!-- blur others when hover -->
+                <!-- maybe title can move 20px~~ -->
+                <div class = "box js-scrollAnimation_toRight" style="--order: 3">
+                    <img class = "icon" src = "../../images/icon1.png">
+                    <div class = "description">
+                        <h3>洗練されたUI</h3>
+                        <p>試行を重ねデザインしたUIは直観的に操作ができます。</p>
+                    </div>
+                </div>
+
+                <div class = "box js-scrollAnimation_toRight" style="--order: 2">
+                    <img class = "icon" src = "../../images/icon2.png">
+                    <div class = "description">
+                        <h3>卓越した予想力</h3>
+                        <p>熟考して組んだアルゴリズムで、更新される度最善の単語を提示します。</p>
+                    </div>
+                </div>
+
+                <div class = "box js-scrollAnimation_toRight" style="--order: 1">
+                    <img class = "icon" src = "../../images/icon3.png">
+                    <div class = "description">
+                        <h3>素早いサポート</h3>
+                        <p>バグを発見次第アップデートの実施を予定しています。</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- user's comment-->
+        <div id="user_review">
+            <h2>たくさんの<br><span class = "bottom_line">好評</span>も！</h2>
+
+            <div id="review_boxes">
+
+                <div class = "review_box js-scrollAnimation_fadeIn">
+                    <div class="review_status">
+                        <figure><img src = "../../images/review_icon1.jpg"></figure>
+                        <span class="stars" style="--star: 5">★★★★★</span>
+                        <span clas="reviewer_name">Google User</span>
+                    </div>
+                    <div class="review">
+                        视觉上的享受!以后再也不会无聊。还有一个特别的小技巧告诉大家。在㎝㎎，㏄的页面可以体验满级VIP加千倍掉宝倍率的版本了。
+                        终于收到我需要的宝贝了。东西很好。价美物廉。说实在这是我来让我最满意的一次购物。无论是掌柜的态度还是对物品。
+                        我都非常满意的。掌柜态度很专业热情。有问必答。回复也很快。
+                        我问了不少问题。他都不觉得烦。
+                    </div>
+                </div>
+
+                <div class = "review_box js-scrollAnimation_fadeIn">
+                    <div class="review_status">
+                        <figure><img src = "../../images/review_icon2.jpg"></figure>
+                        <span class="stars" style="--star: 3.5">★★★★★</span>
+                        <span clas="reviewer_name">someone's name</span>
+                    </div>
+                    <div class="review">
+                        What a practical extension!After I installed, I got a new wife and Stock price doubled!<br>
+                        It's indeed a magical miracal distinctive notable program.
+                    </div>
+                </div>
+
+                <div class = "review_box js-scrollAnimation_fadeIn">
+                    <div class="review_status">
+                        <figure><img src = "../../images/review_icon3.jpg"></figure>
+                        <span class="stars" style="--star: 4.5">★★★★★</span>
+                        <span clas="reviewer_name">someone's name</span>
+                    </div>
+                    <div class="review">
+                        Its resposibility is very quick!<br>
+                        I think Datong's administrative department should emulate it.
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+
+
+        <!-- BOOT STRAP accordion -->
+        <div id="FAQ">
+            <h2>よくあるご質問</h2>
+            <div id="">
+                <button class="accordion">どうすれば使えるようになりますか？</button>
+                <div class="panel">
+                <p><a href="tutorial.html">チュートリアル</a>をチェックしてください。</p>
+                </div>
+
+                <button class="accordion">個人でカスタマイズしてもいいですか？</button>
+                <div class="panel">
+                <p>もちろんです！</p>
+                <p>私の能力はまだ未熟なので自分でアップグレードしていただいてもかまいません</p>
+                </div>
+
+                <button class="accordion">バグを発見しました、どこに報告すればいいでしょうか…</button>
+                <div class="panel">
+                <p><a href="contact.html">コンタクト</a>にて報告してください</p>
+            </div>
+        </div>
+
+
+        </div>
+        <div id="contact">
+            <h2>聯絡我們</h2>
+            <div id="container">
+                <img src="../../images/customer service.jpg" id="bgimage">
+            </div>
+            <div class="contact_form">
+                <label for="CfirstName">名</label>
+                    <input type="text"  id="CfirstName" class="form" placeholder="First Name">
+                <label for="ClirstName">姓</label>
+                    <input type="text"  id="ClastName"  class="form" placeholder="Last Name">
+                <label for="Cemail">Email帳號</label>
+                    <input type="email" id="Cemail"     class="form" placeholder="Email">
+                <label for="Ccontent">內容</label>
+                    <textarea id="Ccontent"    class="textarea" placeholder="Enter some text"></textarea>
+                <input type="submit" class="submit" value="submit!">
+            </div>
+        </div>
+
+            
+
+        <!-- SNS icons and CC -->
+            <div id="footer">
+                <span id="copyRight">© 2022 WordleHandler</span>
+                <div id="SNSs">
+                    <a href="#">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <script src = "../../CSS_JS/homesite.js"></script>
+
+    </div>
+</body>
+</html>
